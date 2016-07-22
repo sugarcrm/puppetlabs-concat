@@ -41,7 +41,7 @@ define concat::fragment(
   if ! ($content or $source) {
     crit('No content, source or symlink specified')
   } elsif ($content and $source) {
-    fail("Can't use 'source' and 'content' at the same time")
+    fail('Can\'t use \'source\' and \'content\' at the same time')
   }
 
   $safe_target_name = regsubst($target, '[/:~\n\s\+\*\(\)]', '_', 'GM')
